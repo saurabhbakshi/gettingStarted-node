@@ -1,4 +1,4 @@
-// Node module to work with Files
+// Node module to work with Files. In this example we will see how to import Node core module
 
 // Importing node module fs in a constant fs
 const fs = require("fs");
