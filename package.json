@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "modules": "node modules/calculator.js",
     "validator": "node npm_external_modules/validator.js",
-    "color-print": "node npm_external_modules/color_print.js"
+    "color-print": "node npm_external_modules/color_print.js",
+    "cmdline": "node cmdLine/cmd_line.js",
+    "yargs-cmdline": "node cmdLine/yargs_cmdline.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/continuumrivet/node_gs#readme",
   "dependencies": {
     "chalk": "^2.4.1",
-    "validator": "^10.8.0"
+    "validator": "^10.8.0",
+    "yargs": "^15.3.1"
   }
 }
