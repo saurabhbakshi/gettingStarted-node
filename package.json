@@ -1,0 +1,26 @@
+{
+  "name": "nodes-basic",
+  "version": "1.0.0",
+  "description": "simple node basic hands on",
+  "main": "01_fs_module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "modules": "node modules/calculator.js",
+    "validator": "node npm_external_modules/validator.js",
+    "color-print": "node npm_external_modules/color_print.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/continuumrivet/node_gs.git"
+  },
+  "author": "Saurabh Jain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/continuumrivet/node_gs/issues"
+  },
+  "homepage": "https://github.com/continuumrivet/node_gs#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "validator": "^10.8.0"
+  }
+}
