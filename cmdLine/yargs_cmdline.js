@@ -5,6 +5,7 @@ const yargs = require("yargs");
 
 // importing custom module
 
+const notes = require("../node_apps/notes");
 // For contrast and comparison you can check the parsed output by yargs by uncommenting 9, 10 below
 // console.log(process.argv);
 // console.log(yargs.argv);
@@ -34,11 +35,12 @@ yargs.command({
       "Adding new note! \n Title : " + argv.title + "\n Body : ",
       argv.body
     );
+    notes.addNote(argv.title, argv.body);
   },
 });
 yargs.command({
   command: "remove",
-  describe: "Remove a new note",
+  describe: "Remove a note",
   builder: {
     title: {
       describe: "Note title",
@@ -49,13 +51,23 @@ yargs.command({
   },
   handler: function (argv) {
     console.log("Removing the note with Title: ", argv.title);
+    notes.removeNote(argv.title);
   },
 });
 yargs.command({
   command: "read",
   describe: "Read a note",
-  handler: function () {
-    console.log("Reading a note");
+  builder: {
+    title: {
+      describe: "Note title",
+      alias: "t",
+      demandOption: true,
+      type: "string",
+    },
+  },
+  handler: function (argv) {
+    console.log("Reading a note with title: ", argv.title);
+    console.log(notes.readNote(argv.title));
   },
 });
 yargs.command({
@@ -63,6 +75,7 @@ yargs.command({
   describe: "List your notes",
   handler: function () {
     console.log("Listing out all notes");
+    console.log(notes.getNotes());
   },
 });
 

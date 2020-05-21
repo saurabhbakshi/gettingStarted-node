@@ -2,7 +2,7 @@
   "name": "nodes-basic",
   "version": "1.0.0",
   "description": "simple node basic hands on",
-  "main": "01_fs_module.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "modules": "node modules/calculator.js",
