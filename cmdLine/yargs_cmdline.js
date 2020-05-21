@@ -16,15 +16,39 @@ yargs.version("1.0.0"); //adding version to this script
 yargs.command({
   command: "add",
   describe: "Add a new note",
-  handler: function () {
-    console.log("Adding new note!");
+  builder: {
+    title: {
+      describe: "Note title",
+      alias: "t",
+      demandOption: true, //marking this parameter as required
+      type: "string", // mapping this option value to string
+    },
+    body: {
+      describe: "Note Body",
+      alias: "b",
+      type: "string", // mapping this option value to string
+    },
+  },
+  handler: function (argv) {
+    console.log(
+      "Adding new note! \n Title : " + argv.title + "\n Body : ",
+      argv.body
+    );
   },
 });
 yargs.command({
   command: "remove",
   describe: "Remove a new note",
-  handler: function () {
-    console.log("Removing the note");
+  builder: {
+    title: {
+      describe: "Note title",
+      alias: "t",
+      demandOption: true, //marking this parameter as required
+      type: "string", // mapping this option value to string
+    },
+  },
+  handler: function (argv) {
+    console.log("Removing the note with Title: ", argv.title);
   },
 });
 yargs.command({
@@ -42,4 +66,5 @@ yargs.command({
   },
 });
 
-console.log(yargs.argv);
+yargs.parse();
+// console.log(yargs.argv);
