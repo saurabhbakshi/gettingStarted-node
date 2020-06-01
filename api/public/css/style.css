@@ -1,0 +1,13 @@
+* {
+  color: gray;
+}
+
+.header {
+  color: gray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border: greenyellow;
+}
+
+.footer {
+  color: blue;
+}

@@ -23,6 +23,7 @@
   "homepage": "https://github.com/continuumrivet/node_gs#readme",
   "dependencies": {
     "chalk": "^2.4.1",
+    "postman-request": "^2.88.1-postman.22",
     "validator": "^10.8.0",
     "yargs": "^15.3.1"
   }
