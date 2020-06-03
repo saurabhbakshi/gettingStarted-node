@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\app.js"
+      "program": "${workspaceFolder}\\task-manager\\src\\index.js"
       // "program": "${workspaceFolder}\\mongo_db\\mongoose.js"
     }
   ]
